@@ -1,23 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import Input from "./components/input";
 import './App.css';
+// in order for App.js to receive the export, import
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+      <Input />
+
       </header>
     </div>
   );

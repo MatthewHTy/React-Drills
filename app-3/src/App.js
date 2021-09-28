@@ -1,23 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import ListInput from './components/list';
 import './App.css';
 
 function App() {
+  const [arr] = useState(['Sushi','Audi R8','McLaren','Wagyu'])
+  const [userInput, setUserInput] = useState("")
+
+  const handleChange = (e) => {
+    setUserInput(e.target.value)
+}
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <input onChange={handleChange} type="text" /> 
+        <ListInput user={userInput} />
       </header>
     </div>
   );
